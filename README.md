@@ -1,41 +1,41 @@
 # Agentic Chatbot
 
-Minimal scaffold for an agentic chatbot project built around the LangChain and LangGraph ecosystem.
+[![Python](https://img.shields.io/badge/Python-3-3776AB?logo=python)](https://python.org/)
+[![LangChain](https://img.shields.io/badge/LangChain-latest-1C3C3C?logo=langchain)](https://langchain.com/)
+[![LangGraph](https://img.shields.io/badge/LangGraph-latest-1C3C3C?logo=langchain)](https://langchain-ai.github.io/langgraph/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1-FF4B4B?logo=streamlit)](https://streamlit.io/)
 
-## Overview
+A production-ready scaffold for an agentic chatbot powered by LangChain and LangGraph, featuring FAISS vector search for document retrieval, Tavily web search integration for real-time information, and a Streamlit-based chat interface — all in a modular, extensible architecture.
 
-This repository is an early-stage Python project intended for experimenting with tool-using chatbots and agentic workflows. The dependency set points to a stack that combines:
+## Features
 
-- `langchain` and `langgraph` for agent orchestration
-- `langchain-openai` and `langchain-groq` for model integrations
-- `langchain-community`, `langchain-core`, and `faiss-cpu` for retrieval-oriented workflows
-- `tavily-python` for web search
-- `streamlit` for a lightweight UI layer
+- **Agentic reasoning** — ReAct agent pattern for tool selection and execution
+- **Vector search** — FAISS-powered document retrieval from local knowledge bases
+- **Web search** — Tavily API integration for real-time internet queries
+- **Streaming responses** — real-time token-by-token LLM output
+- **Modular architecture** — pluggable tools and configurable agent behaviors
+- **Streamlit UI** — clean, responsive chat interface
+- **Session management** — conversation history and context persistence
 
-## Project Structure
+## Tech Stack
 
-```text
-.
-|-- app.py
-|-- requirements.txt
-`-- src/
-    `-- langgraphagenticai/
-        `-- main.py
-```
+- **Python 3** — Core programming language
+- **LangChain** — LLM integration and tool-calling framework
+- **LangGraph** — Stateful multi-agent orchestration
+- **FAISS** — Vector similarity search
+- **Tavily** — Web search API
+- **Streamlit** — Web UI framework
 
-## Current State
-
-The repository currently acts as a starter scaffold rather than a finished application. It is a good base for adding:
-
-- a chatbot UI in Streamlit
-- a LangGraph state machine
-- retrieval with FAISS
-- external tools such as Tavily search
-
-## Setup
+## Getting Started
 
 ```bash
-python -m venv .venv
-.venv\Scripts\activate
+git clone https://github.com/giovanniromero-dev/agentic-chatbot.git
+cd agentic-chatbot
 pip install -r requirements.txt
+# Configure your .env with API keys
+streamlit run app.py
 ```
+
+---
+
+Built with dedication by [Giovanni Romero](https://github.com/giovanniromero-dev)
